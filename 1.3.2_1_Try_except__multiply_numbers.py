@@ -7,11 +7,11 @@ def multiply_numbers(a, b):
     try:
         result = a * b
         if not isinstance(result, (int, float)):
-            raise TypeError("The result is not a number.")
+            raise TypeError("The elements must be numbers.")
         return result
 
-    except TypeError as e:
-        print(f"Error {e}")
+    except Exception as e:
+        return f"Error {e}"
 
 # Тестовый пример
 print(multiply_numbers(5, 3))  # Ожидаемый вывод: 15
